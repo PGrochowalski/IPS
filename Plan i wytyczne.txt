@@ -1,0 +1,47 @@
+Plan przedmiotu:
+	* Projekty zespołowe nie dotyczące pracy inżynierskiej
+	* W ramach projektu mają zostać spełnione nastepujące warunki:
+		- wdrożone zarządzanie projektem wraz z repozytorium kodu w np.: GitHub,
+		- GitHub: pgrochowalski (piotr.r.grochowalski@gmail.com).
+	* Przygotowanie projektu całości aplikacji (dla potrzeb dokumentacji)
+		- opracowanie założeń i wymagań,
+		- opracowanie wymaganych funkcjonalności,
+		- opracowanie odpowiednich diagramów UML lub BPML, diagramów baz danych, itp.
+	* Implementacja w oparciu o zarządzanie projektem i repozytorium
+	* Testowanie
+	* Benchmark
+	* Przygotowanie dokumentacji
+	* Prezentacja projektu
+	
+	* Terminarz
+		- opracowanie założeń i wymagań do:
+		- opracowanie wstępnej dokumentacji do:
+		- implementacja do:
+		- testy do:
+		- przygotowanie dokumentacji do:
+		- prezentacja projektu, rozliczenie, zaliczenia: 16.12.2019 
+
+Zakres projektu:
+	Wykonanie aplikacji pozwalającej na komunikację z dwoma silnikami bazodanowymi i wspierającej możliwość transferu pomiędzy nimi danych.
+	Transfer danych ma polegać na swobodnym wyborze dostępnych tabel w danym systemie bazodanowym i możliwości ich przeniesienia do drugiego silnika.
+	Aplikacja może zostać wykonana w dowolnej technologii (standalone, www, mobilna), przy wykorzystaniu różnych języków programowania.
+
+	Aplikacja ma umożliwiać wczytanie danych do wybranych baz danych, ich wyświetlanie, modyfikację i usuwanie.
+	Aplikacja ma wykonać benchmark wybranych baz danych pod względem czasu niezbędnego obróbki danych i potrzebnych do tego zasobów tj. 
+		- wczytywanie danych,
+		- transfer danych wraz z utworzeniem niezbędnej struktury,
+		- weryfikacja kilku zapytań z różnym stopniem skomplikowania (czasu i wykorzystania zasobów) tj. zapytanie proste, wybierające, grupujące, zliczające, ze złączeniami.
+Zakres technologii:
+	- dane: https://toolbox.google.com/datasetsearch (duże zbiory danych min. około 10 mln rekordów)
+	- bazy danych 1: FireBird, MySQL, MariaDB, PostgreSQL, MongoDB itp.
+	- bazy danych 2: Clickouse https://clickhouse.yandex, https://clickhouse.yandex/docs/en/
+	- języki programowania np.: Java, Python, itd.
+		
+* Wirtualizacja/Konteneryzacja: https://docs.docker.com/get-started/
+** Docker
+	- Oficjalna strona: https://www.docker.com
+	- Docker Hub: https://hub.docker.com
+	- Dokumentacja: https://docs.docker.com
+	
+	- Wersje: Community, Enterprise
+** VirtualBox	
