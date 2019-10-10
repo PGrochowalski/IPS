@@ -1,0 +1,82 @@
+version: '3.7'
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ips2019
+      MYSQL_USER: ips2019
+      MYSQL_PASSWORD: ips2019
+    ports:
+      - "3306:3306"
+
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ips2019
+      POSTGRES_DB: ips2019
+    ports:
+      - "5432:5432"
+ 
+  mariadb:
+    container_name: mariadb
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ips2019
+      MYSQL_USER: ips2019
+      MYSQL_PASSWORD: ips2019
+    ports:
+      - "3305:3306"
+ 
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    restart: always 
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ips2019
+ 
+  neo4j:
+    container_name: neo4j
+    image: neo4j:latest
+    ports:
+      - "7474:7474"
+      - "7473:7473"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/ips2019
+
+  firebird:
+    container_name: firebird
+    image: jacobalberty/firebird:latest
+    ports:
+      - "3050:3050"
+    environment:
+      # Głowny użytkownik FireBird: sysdba
+      ISC_PASSWORD: masterkey
+      FIREBIRD_DATABASE: ips2019
+      FIREBIRD_USER: ips2019
+      FIREBIRD_PASSWORD: ips2019
+  
+  clickhouse:
+    container_name: clickhouse
+    image: yandex/clickhouse-server
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+     
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+  
